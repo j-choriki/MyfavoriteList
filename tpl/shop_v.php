@@ -8,7 +8,14 @@
 <title>店舗詳細</title>
 </head>
 <body>
-<h1>店舗詳細</h1>
-<!-- <script></script> -->
+<header>
+    <h1>店舗詳細</h1>
+</header>
+<main>
+    <section id="shop_data"></section>
+    <p><a href="./">戻る</a></p>
+</main>
+<fotter><fotter>
+<script type="module" src="./js/shop.js"></script>
 </body>
 </html>
