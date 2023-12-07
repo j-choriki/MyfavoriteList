@@ -1,0 +1,12 @@
+body section:nth-of-type(1) {
+  display: none;
+}
+body #serch {
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: rgb(243, 181, 66);
+  color: white;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,19 @@
+$baseColor :rgb(243, 181, 66);
+body{
+    section{
+        &:nth-of-type(1){
+            display: none;
+        }
+    }
+
+    #serch{
+        padding: 10px;
+        border-radius: 10px;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+        background-color: $baseColor;
+        color: white;
+
+    }
+}

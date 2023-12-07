@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         // DOMParserを使用してXMLを解析
                         const parser = new DOMParser();
                         const xmlDoc = parser.parseFromString(result, "application/xml");
-                        console.log(xmlDoc);
+                        // console.log(xmlDoc);
                         // 取得値を入れてタグに入れていく
                         const shopElements = xmlDoc.querySelectorAll('shop');   //XMLのshop情報を全件取得
                         shopElements.forEach((shopElement) => {                 //お店件数分新しくタグを生成
