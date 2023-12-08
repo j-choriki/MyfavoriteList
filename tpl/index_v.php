@@ -14,19 +14,20 @@
     <h1>My Favorite Restaurant</h1>
 </header>
 <main>
-    <!-- 検索部(モーダル) -->
+    <!-- 検索部 -->
     <section>
-        
-        <label for="select_radius">検索範囲</label>
-        <select id="select_radius">
-            <?php foreach($radius_ary as $radius_key=> $radius):?>
-                <option value="<?php echo $radius_key; ?>"> <?php echo $radius;?></option>
-            <?php endforeach;?>
-        </select>
-        <button id="location">検索</button>
+
+        <label for="select_radius"><span>検索範囲<span>
+            <select id="select_radius">
+                <?php foreach($radius_ary as $radius_key=> $radius):?>
+                    <option value="<?php echo $radius_key; ?>"> <?php echo $radius;?></option>
+                <?php endforeach;?>
+            </select>
+        </label>
+        <button id="serch">検索</button>
     </section>
     
-    <button id="serch">検索</button>
+    
 
     <!-- 取得データ表示部 -->
     <section>
@@ -35,6 +36,7 @@
 
 </main>
 <fotter><fotter>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
 <script type="module" src="./js/index.js"></script>
 </body>
 </html>

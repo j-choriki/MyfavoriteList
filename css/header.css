@@ -6,4 +6,8 @@ header {
   background-color: rgb(243, 181, 66);
   color: white;
   margin-bottom: 30px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=header.css.map */
