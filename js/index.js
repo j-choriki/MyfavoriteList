@@ -1,10 +1,17 @@
 'use strict';
 import { getData } from './comonn.js';
 
-const btn = document.getElementById('location');
+//現在地から半径〇〇メートルの検索ボタン
+const btnLocation = document.getElementById('location');
+//モーダルを開くようのボタン
+const btnSerch = document.getElementById('serch');
+//選択半径のselectタグ
 const selectRadius = document.getElementById('select_radius');
+//レストラン表示用のボックス
 const shopCard = document.getElementById('shop_card');
+//非同期通信用にURLを取得
 const pathName = location.pathname;
+
 
 
 //ページ訪問時の処理
@@ -30,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             a.href = './shop.php?id= ';
                             a.href += shopElement.querySelector('id').textContent;  //遷移先で詳細情報取得用
                             shopCard.appendChild(a);
+                            const flexBox = document.createElement('div');
+                            flexBox.className = 'flex';
                             for(let i = 0; i < 3; i++){     //表示項目を増やす場合以下をついき
                                 let p = document.createElement('p');
                                 switch(i){
@@ -45,7 +54,13 @@ document.addEventListener("DOMContentLoaded", function() {
                                         p.textContent = shopElement.querySelector('access').textContent;
                                         break;
                                 }
-                                a.appendChild(p);
+                                if(i != 0){
+                                    flexBox.appendChild(p);
+                                    a.appendChild(flexBox);
+                                }else{
+                                    a.appendChild(p);
+                                }
+                                
                             }
                         });
                     }
@@ -61,8 +76,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// 検索ボタンが押された際の処理:
-btn.addEventListener('click', () => {
+//モーダルが開く処理
+btnSerch.addEventListener('click', () =>{
+    
+})
+
+
+// 半径選択後の検索ボタンが押された際の処理:
+btnLocation.addEventListener('click', () => {
      //ボタンが押される前に表示されていたものの削除
     navigator.geolocation.getCurrentPosition(
         function (position) {
