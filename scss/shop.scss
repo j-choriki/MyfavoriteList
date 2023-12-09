@@ -1,0 +1,36 @@
+main{
+    padding-top:70px;
+    #shop_data{
+        margin: 10px;
+        .div_header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:30px 0;
+            h3{
+                width: 200px
+            }
+        }
+
+        .div_main{
+            //レストランの画像のCSS
+            div{
+                text-align: center;
+                margin-bottom:30px; 
+            }
+            table{
+                tr{
+                    th{
+
+                    }
+                    td{
+                        padding-bottom: 25px; 
+                    }
+                }
+            }
+
+
+        }
+    }
+    
+}

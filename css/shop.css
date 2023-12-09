@@ -1,0 +1,22 @@
+main {
+  padding-top: 70px;
+}
+main #shop_data {
+  margin: 10px;
+}
+main #shop_data .div_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+main #shop_data .div_header h3 {
+  width: 200px;
+}
+main #shop_data .div_main div {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main #shop_data .div_main table tr td {
+  padding-bottom: 25px;
+}/*# sourceMappingURL=shop.css.map */
