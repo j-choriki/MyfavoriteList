@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //半径のセレクトボックスに代入する配列を生成
 $radius_ary = [
@@ -9,6 +10,20 @@ $radius_ary = [
     '4' => '2000m',
     '5' => '3000m'
 ];
+
+if(isset($_GET['send']) && $_GET['send'] =='logout'){
+    $_SESSION = [];
+}
+
+
+//ログイン状態か確認
+$user_mail= '';
+if(isset($_SESSION['mail'])){
+    $user_mail = $_SESSION['mail'];
+}
+
+
+
 
 
 

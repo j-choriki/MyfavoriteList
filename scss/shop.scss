@@ -1,36 +1,75 @@
-main{
-    padding-top:70px;
-    #shop_data{
-        margin: 10px;
-        .div_header{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin:30px 0;
-            h3{
-                width: 200px
+$baseColor :rgb(246, 195, 117);
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    main{
+        padding-top:70px;
+        flex: 1;
+        #shop_data{
+            margin: 10px;
+            .div_header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:30px 0;
+                h3{
+                    width: 200px
+                }
             }
-        }
-
-        .div_main{
-            //レストランの画像のCSS
-            div{
-                text-align: center;
-                margin-bottom:30px; 
-            }
-            table{
-                tr{
-                    th{
-
-                    }
-                    td{
-                        padding-bottom: 25px; 
+    
+            .div_main{
+                //レストランの画像のCSS
+                div{
+                    text-align: center;
+                    margin-bottom:30px; 
+                }
+                table{
+                    font-size: 0.9rem;
+                    tr{
+                        border-bottom: 2px solid $baseColor;
+                        th{
+                            background-color: rgb(252, 239, 207);
+                            text-align: center;
+                            vertical-align: inherit;
+                        }
+                        td{
+                            padding: 12.5px; 
+                        }
                     }
                 }
             }
-
-
         }
     }
-    
+
+    #menu{
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                margin :10px 5px;
+                padding :10px;
+                &:nth-of-type(2),
+                &:nth-of-type(3){
+                    background-color: $baseColor;
+                    color: white;
+                    border-radius:10px
+                }
+
+                a{
+                    border-bottom: 2px solid $baseColor;
+                }
+            }
+            #heart{
+                border: 1px solid black;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                text-align: center;
+                &.on{
+                    background-color: pink;
+                }
+            }
+        }
+    }
 }

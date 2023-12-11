@@ -1,1 +1,118 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2rem;
+  background-color: rgb(246, 195, 117);
+  color: white;
+  margin-bottom: 30px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .openbtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999; /* ボタンを最前面に */
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+header .openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  width: 45%;
+}
+header .openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+header .openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+header .openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+header .openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+header .openbtn.active span:nth-of-type(2) {
+  opacity: 0; /* 真ん中の線は透過 */
+}
+header .openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+header #g-nav {
+  /* position:fixed;にしz-indexの数値を小さくして最背面へ */
+  position: fixed;
+  z-index: -100;
+  display: none;
+  opacity: 0; /* はじめは透過0 */
+  /* ナビの位置と形状 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* ナビの高さ */
+  background-color: rgb(252, 239, 207);
+  /* 動き */
+  transition: all 0.3s;
+}
+header #g-nav ul {
+  display: none; /* はじめは非表示 */
+  /* ナビゲーション天地中央揃え */
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+header #g-nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+}
+header #g-nav.panelactive {
+  display: block;
+  opacity: 1;
+  z-index: 999;
+}
+header #g-nav.panelactive #g-nav-list {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+header #g-nav.panelactive ul {
+  display: block;
+}
+
+footer {
+  background-color: rgb(116, 125, 120);
+  padding: 30px;
+  font-size: 0.8rem;
+}
+footer p {
+  color: white;
+  text-align: center;
+}
+footer p a {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
