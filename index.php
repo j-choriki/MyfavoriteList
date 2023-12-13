@@ -23,12 +23,6 @@ if(isset($_SESSION['mail'])){
 }
 
 
-
-
-
-
-
-
 //viewの読み込み
 require_once './tpl/index_v.php';
 ?>
