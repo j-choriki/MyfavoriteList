@@ -22,7 +22,7 @@ if(restrantIds.length != 0){
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        return response.text(); // Use response.text() for XML
+        return response.text(); 
     })
     .then(xmlText => {
         //生成されたボタン情報を格納する配列
@@ -63,7 +63,7 @@ if(restrantIds.length != 0){
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    return response.json(); // Use response.text() for XML
+                    return response.json(); 
                 })
                 .then(data => {
                     console.log(data);
