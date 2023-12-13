@@ -1,0 +1,60 @@
+$baseColor :rgb(243, 181, 66);
+$borderColor :#ffcb8a;
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    main{
+        flex: 1;
+
+        form{
+            position: absolute;
+            top:30%;
+            left:5%;
+            border: solid 2px $borderColor;
+            border-radius:15px;
+            h1{
+                font-size:1.2rem;
+                text-align: center;
+                border-bottom: 2px solid $baseColor;
+                width: 100px;
+                margin: 15px auto ;
+            }
+            #err_msg{
+                text-align: center;
+                color: red;
+                font-size: 0.8rem;
+            }
+            div{
+                margin: 15px 10px;
+                input{
+                    width: 100%;
+                    padding: 8px;
+                    box-sizing: border-box;
+                    border: 1px solid $borderColor;
+                    border-radius: 4px;
+                }
+            }
+            #btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    a{
+                        border-bottom: 2px solid $baseColor;
+                    }
+                }
+                button{
+                    padding: 5px;
+                    border-radius: 10px;
+                    background-color: $baseColor;
+                    color: white;
+                    margin-left: 10px;
+                }
+            }
+      
+        }
+    }
+
+}
